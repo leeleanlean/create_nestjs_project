@@ -51,7 +51,11 @@ const Entity = [ UserEntity ]
 
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    const routes: string[] = ['user', 'upload']
-    consumer.apply(LoggerMiddleware).forRoutes(...routes);
+    consumer.apply(LoggerMiddleware).forRoutes(
+      'test',
+      'auth',
+      'user',
+      'upload'
+    );
   }
 }

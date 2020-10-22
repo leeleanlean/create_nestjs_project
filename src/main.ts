@@ -13,6 +13,9 @@ async function bootstrap() {
     logger: ['error', 'warn']
   });
 
+  // Set default Prefix
+  app.setGlobalPrefix(CONFIG.PREFIX);
+
   // Static resource directory
   app.use('/public', serveStatic(join(__dirname, CONFIG.STATIC_FOLDER), {
     maxAge: CONFIG.STATIC_MAX_AGE,

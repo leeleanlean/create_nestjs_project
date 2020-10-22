@@ -2,6 +2,8 @@ export default {
   // Port
   SERVER_PORT: 3000,
 
+  PREFIX: 'api',
+
   // Auth SECRET
   AUTH_SECRET: 'xxxxxxxxxx',
   AUTH_TOKEN: 'token',
